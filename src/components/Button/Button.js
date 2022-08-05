@@ -1,8 +1,9 @@
-import styles from './Button.module.scss';
+import styles from  './Button.module.scss'
 
-
-const Button = () => {
-    return <button className={styles.button} type="text" />
-}
+const Button = param =>{
+    return(
+        <button className= {styles.button} >{param.children}</button>
+    );
+};
 
 export default Button;
