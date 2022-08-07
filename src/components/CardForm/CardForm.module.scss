@@ -1,6 +1,6 @@
 @import '../../styles/settings.scss';
 
-.columnForm {
+.cardForm {
     text-align: center;
     padding: 10px;
 }
@@ -10,7 +10,7 @@ label {
 }
 
 @media (max-width: 768px) {
-    .columnForm {
+    .cardForm {
         display: flex;
         flex-direction: column;
     }
