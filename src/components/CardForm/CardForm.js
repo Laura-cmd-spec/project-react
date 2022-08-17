@@ -6,7 +6,6 @@ import TextInput from './../TextInput/TextInput';
 
 const CardForm = props => {
 
-
     const [title, setTitle] = useState('');
 
     const handleSubmit = e => {

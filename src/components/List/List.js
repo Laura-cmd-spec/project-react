@@ -39,19 +39,19 @@ const List = () => {
 
   const addColumn = newColumn => {
     setColumns([...columns, { id: shortid(), title: newColumn.title, icon: newColumn.icon, cards: [] }]);
-  };  
+};
 
-  const addCard = (newCard, columnId) => {
-	const columnsUpdated = columns.map(column => {
-		if(column.id === columnId)
-			return {...column, cards: [...column.cards, { id: shortid(), title: newCard.title }]}
-		else
-			return column
-	})
+const addCard = (newCard, columnId) => {
+  const columnsUpdated = columns.map(column => {
+    if(column.id === columnId)
+    return { ...column, cards: [...column.cards, { id: shortid(), title: newCard.title }]}
+    else
+    return column
+})
 
-	setColumns(columnsUpdated);
+  setColumns(columnsUpdated);
 
-  };
+};
    
 	return (
 		<div className={styles.list}>
@@ -59,13 +59,13 @@ const List = () => {
 				<h2 className={styles.title}>Things to do<span>soon!</span></h2>
 			</header>
 			<p className={styles.description}>Interesting things I want to check out</p>
-			<section className={styles.columns}>
-        {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} />)}
-			</section>
-			<ColumnForm action={addColumn} />
-		</div>
-	);
-};
+      <section className={styles.columns}>
+            {columns.map(column => <Column key= {column.id} title= {column.title} icon= {column.icon} cards= {column.cards} addCard= {addCard} />)}
+        </section>
+        <ColumnForm action={addColumn} />
+      </div>
+    );
+  };
 
 
 
