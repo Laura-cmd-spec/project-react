@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 const SearchForm = () => {
     return (
         <form className={styles.searchForm}>
-            <TextInput className="input" placeholder="Search..." />
+            <TextInput className="input" placeholder="Search..." type="text"/>
             <Button>
             <span className="fa fa-search" />             
             </Button>
