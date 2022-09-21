@@ -15,7 +15,7 @@ export const getAllColumns = state =>{
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 export const addCard = payload => ({ type: 'ADD_CARD', payload });
-export const updateSearching = payload => ({ type: 'UPDATE_SEARCHING', payload})
+export const updateSearching = payload => ({ type: 'UPDATE_SEARCH', payload})
 
 
 const reducer = (state, action) => {
