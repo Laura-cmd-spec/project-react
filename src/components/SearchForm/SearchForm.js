@@ -15,7 +15,6 @@ const SearchForm = () => {
         dispatch(updateSearching(SearchString));
         setSearchString('');
         };
-
             
     return (
         <form onSubmit={handleSubmit} className={styles.searchForm}>

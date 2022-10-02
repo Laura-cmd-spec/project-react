@@ -6,6 +6,7 @@ import Home from './components/Home/Home.js';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Page404 from './components/Page404/Page404.js';
+import List from './components/List/List';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="/list/:listId" element={<List />} />
           <Route path="*" component={<Page404/>} /> 
         </Routes>
       </Container>
